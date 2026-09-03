@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Voice input -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- Talking to the AI API -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Resolving "call Mom" -> phone number -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- Placing calls directly (optional; ACTION_DIAL below works without this) -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- Listing installed apps so "open Spotify" works on modern Android -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Jarvis"
+        android:theme="@style/Theme.Jarvis"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="Jarvis">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
