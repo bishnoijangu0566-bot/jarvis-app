@@ -28,7 +28,7 @@ jobs:
 
       - name: Build debug APK
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_API_KEY:"AQ.Ab8RN6IWiYF9owF-PmuP8YMIpM4vU9iscSRB-gPPRLyLwyTIaA"
         run: gradle assembleDebug
 
       - name: Upload APK
